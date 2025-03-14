@@ -87,13 +87,13 @@ title('Todas las Rotaciones Superpuestas');
 figure;
 hold on; grid on; axis equal;
 % Rotación secuencial
-quiver3(0,0,0,vec_rotX(1,1),vec_rotX(2,1),vec_rotX(3,1),'g','LineWidth',2, 'AutoScale', 'off');
+h1 = quiver3(0,0,0,vec_rotX(1,1),vec_rotX(2,1),vec_rotX(3,1),'g','LineWidth',2, 'AutoScale', 'off');
 quiver3(0,0,0,vec_rotX(1,2),vec_rotX(2,2),vec_rotX(3,2),'g','LineWidth',2, 'AutoScale', 'off');
 quiver3(0,0,0,vec_rotX(1,3),vec_rotX(2,3),vec_rotX(3,3),'g','LineWidth',2, 'AutoScale', 'off');
 % Rotación con matriz completa
-quiver3(0,0,0,vec_rot_total(1,1),vec_rot_total(2,1),vec_rot_total(3,1),'c--','LineWidth',2, 'AutoScale', 'off');
+h2 = quiver3(0,0,0,vec_rot_total(1,1),vec_rot_total(2,1),vec_rot_total(3,1),'c--','LineWidth',2, 'AutoScale', 'off');
 quiver3(0,0,0,vec_rot_total(1,2),vec_rot_total(2,2),vec_rot_total(3,2),'c--','LineWidth',2, 'AutoScale', 'off');
 quiver3(0,0,0,vec_rot_total(1,3),vec_rot_total(2,3),vec_rot_total(3,3),'c--','LineWidth',2, 'AutoScale', 'off');
 xlabel('X'); ylabel('Y'); zlabel('Z');
 title('Comparación: Transformación Secuencial vs. Matriz Total');
-legend({'Secuencial','Matriz Total'});
+legend([h1,h2],{'Secuencial','Matriz Total'});
